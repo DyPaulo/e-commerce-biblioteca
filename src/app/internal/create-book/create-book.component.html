@@ -1,0 +1,68 @@
+<h3>Cadastrar Livro</h3>
+
+<div class="container" [formGroup]="form">
+  <div class="row">
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Título</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput formControlName="title" placeholder="Título">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Author</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput formControlName="author" placeholder="Author">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Editora</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput formControlName="publisher" placeholder="Editora">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Descrição</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput formControlName="description" placeholder="Descrição">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Número de paginas</mat-label>
+      <mat-form-field class="example-full-width">
+        <input min="0" type="number" type="number" matInput formControlName="page_count" placeholder="Número de paginas">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Quantidade em estoque</mat-label>
+      <mat-form-field class="example-full-width">
+        <input min="0" type="number" matInput formControlName="stock" placeholder="Quantidade em estoque">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 d-flex flex-column">
+      <mat-label>Preço</mat-label>
+      <mat-form-field class="example-full-width">
+        <input
+          type="text"
+          mask="separator.2"
+          [thousandSeparator]="'.'"
+          [decimalMarker]="','"
+          prefix="R$ "
+          [dropSpecialCharacters]="true"
+          matInput formControlName="price"
+          placeholder="Preço">
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<div class="w-100 d-flex align-items-center justify-content-center">
+  <button (click)="persistBook()" [disabled]="form.invalid" mat-fab aria-label="Example icon button with a delete icon" class="d-flex flex-row">
+    <span style="color: #0d6efd; font-size: 24px; cursor: pointer;" class="mdi mdi-plus"></span>
+  </button>
+</div>

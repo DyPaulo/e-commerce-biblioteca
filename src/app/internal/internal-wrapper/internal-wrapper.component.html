@@ -1,0 +1,13 @@
+<div class="w-100 vh-100 d-flex flex-column align-items-center" style="background-color: #f6f6f6">
+  <mat-toolbar style="background-color: #0d6efd">
+    <div class="d-flex flex-row gap-3 justify-content-center w-100">
+      <span routerLink="report" style="color: white; font-size: 42px; cursor: pointer" class="mdi mdi-file-chart-outline"></span>
+      <span routerLink="create-book" style="color: white; font-size: 42px; cursor: pointer;" class="mdi mdi-book-plus-multiple"></span>
+      <span routerLink="rent-book" style="color: white; font-size: 42px; cursor: pointer;" class="mdi mdi-book-education"></span>
+    </div>
+  </mat-toolbar>
+
+  <div class="p-4 w-100 vh-100" style="background-color: white; max-width: 1280px; box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

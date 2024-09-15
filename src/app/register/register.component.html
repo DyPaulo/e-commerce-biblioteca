@@ -1,0 +1,38 @@
+<div class="vh-100 d-flex align-items-center justify-content-center">
+  <form
+    style="max-width: 400px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"
+    class="bg-white rounded-2 p-5 d-flex flex-column w-100" [formGroup]="form">
+    <ng-container>
+      <mat-label>CPF</mat-label>
+      <mat-form-field class="example-full-width">
+        <input mask="000.000.000-00" matInput formControlName="cpf" placeholder="000.000.000-00">
+      </mat-form-field>
+    </ng-container>
+
+    <ng-container>
+      <mat-label>Email</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="email" matInput formControlName="email" placeholder="seuEmail@gmail.com">
+      </mat-form-field>
+    </ng-container>
+
+    <ng-container>
+      <mat-label>Senha</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="password" matInput formControlName="password" placeholder="senha">
+      </mat-form-field>
+    </ng-container>
+
+    <ng-container>
+      <mat-label>Credencial</mat-label>
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput formControlName="credential" placeholder="credencial">
+      </mat-form-field>
+    </ng-container>
+
+    <div class="d-flex flex-row gap-5">
+      <button class="w-50" (click)="register()" mat-flat-button [disabled]="form.invalid">Registrar</button>
+      <button class="w-50" mat-flat-button routerLink="/login">Login</button>
+    </div>
+  </form>
+</div>
